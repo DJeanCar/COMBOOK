@@ -1,7 +1,7 @@
 # Django settings for COMBOOK project.
 from unipath import Path
 
-RUTA_PRYECTO = Path(__file__).ancestor(2)
+RUTA_PROYECTO = Path(__file__).ancestor(2)
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -68,13 +68,14 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
-STATIC_URL = '/static/'
+STATIC_URL = '/estatico/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    RUTA_PROYECTO.child("estatico"),
 )
 
 # List of finder classes that know how to find static files in
@@ -114,6 +115,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    RUTA_PROYECTO.child("plantillas"),
 )
 
 INSTALLED_APPS = (
